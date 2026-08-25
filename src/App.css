@@ -1,0 +1,552 @@
+@tailwindcss base;
+@tailwindcss components;
+@tailwindcss utilities;
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #fbf9f5;
+  color: #2c2c2c;
+}
+
+/* Header Container */
+.header {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+.brand-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8c857b;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.brand-title {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+}
+
+.brand-title em {
+  font-style: italic;
+  color: #c85a32;
+}
+
+.brand-sub {
+  font-size: 15px;
+  color: #666055;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Search Bar Box */
+.search-wrap {
+  margin-bottom: 25px;
+}
+
+.search-label {
+  display: block;
+  font-size: 12px;
+  color: #7a7368;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2ddd5;
+  border-radius: 30px;
+  padding: 4px 6px 4px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.search-icon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
+.search-box button {
+  background: #2c2b29;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-box button:hover {
+  background: #44423e;
+}
+
+/* Navigation Tabs */
+.tabs {
+  display: inline-flex;
+  gap: 8px;
+  background: #efebe4;
+  padding: 4px;
+  border-radius: 25px;
+}
+
+.tab-btn {
+  text-decoration: none;
+  padding: 8px 18px;
+  font-size: 13px;
+  color: #666055;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tab-btn .count {
+  background: #e2ddd5;
+  color: #444;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 11px;
+  margin-left: 4px;
+}
+/* Cards Layout Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 10px 0;
+}
+
+/* Individual Card */
+.card-item {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper */
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Category Badge (Top Left of Image) */
+.badge-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: #1e2d1d; /* Dark Forest Green Badge */
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+/* Floating Heart Icon Button (Top Right) */
+.heart-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.heart-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Card Body Content */
+.card-body-content {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-title {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.recipe-meta {
+  font-size: 13px;
+  color: #8c857b;
+  margin: 0 0 16px 0;
+}
+
+/* View Details Red Link Button */
+.view-details-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #a93c20; /* Deep Terracotta Red */
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: auto;
+}
+
+.view-details-btn:hover {
+  color: #822b15;
+}
+/* Modal Overlay & Card Container */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-card {
+  background: #fdfbf7;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  border-radius: 12px;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Hero Banner */
+.modal-hero {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+.modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.modal-title {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modal-tag {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Modal Body Content */
+.modal-body {
+  padding: 24px;
+}
+
+.modal-action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.modal-fav-btn {
+  background: #c84b31;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-fav-btn.saved {
+  background: #a93c20;
+}
+
+/* Section Formatting */
+.modal-section {
+  margin-bottom: 30px;
+}
+
+.modal-section-title {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #38402f;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #38402f;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+
+/* Ingredients Layout Grid */
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px 24px;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #e2ddd5;
+  padding-bottom: 4px;
+  font-size: 14px;
+}
+
+.ing-name {
+  color: #4a4a4a;
+}
+
+.ing-measure {
+  color: #c84b31;
+  font-weight: 700;
+}
+
+/* Instructions */
+.instructions-text {
+  color: #555;
+  line-height: 1.7;
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+/* Good to Know Metadata Row */
+.good-to-know-row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.meta-label {
+  display: block;
+  font-size: 11px;
+  color: #8c857b;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-size: 14px;
+  color: #333;
+}
+
+.meta-link {
+  font-size: 14px;
+  color: #38402f;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Homepage aur Favorites page dono ke liye Same Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 16px 0;
+}
+
+/* Individual Card Styling */
+.single-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Section */
+.card-media {
+  position: relative;
+  width: 100%;
+  height: 190px;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Category Badge (Top Left) */
+.category-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  background-color: #1c352d; /* Dark Green */
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+/* Floating White Heart Button (Top Right) */
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Content Area */
+.card-info {
+  padding: 18px 16px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-heading {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.recipe-subtext {
+  font-size: 13px;
+  color: #8c887b;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+/* Red View Details Button */
+.details-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #a93c20;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-top: auto;
+}
+.margin{
+  margin: 45px;
+}
